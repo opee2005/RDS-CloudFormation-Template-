@@ -1,21 +1,21 @@
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "AWS CloudFormation Sample Template for creating an Amazon RDS DB instance: Sample template showing how to create a DB instance with Enhanced Monitoring enabled. **WARNING** This template creates an RDS DB instance. You will be billed for the AWS resources used if you create a stack from this template.",
+    "Description": "AWS CloudFormation Sample Template for creating an Amazon RDS DB instance: Sample template showing how to create a DB instance with Enhanced Monitoring enabled.",
     "Parameters": {
         "DBInstanceID": {
-            "Default": "mydbinstance",
+            "Default": "dbinstance",
             "Description": "My database instance",
             "Type": "String",
-            "MinLength": "1",
+            "MinLength": "4",
             "MaxLength": "63",
             "AllowedPattern": "[a-zA-Z][a-zA-Z0-9]*",
             "ConstraintDescription": "Must begin with a letter and must not end with a hyphen or contain two consecutive hyphens."
         },
         "DBName": {
-            "Default": "mydb",
+            "Default": "mydatabase",
             "Description": "My database",
             "Type": "String",
-            "MinLength": "1",
+            "MinLength": "4",
             "MaxLength": "64",
             "AllowedPattern": "[a-zA-Z][a-zA-Z0-9]*",
             "ConstraintDescription": "Must begin with a letter and contain only alphanumeric characters."
@@ -38,7 +38,7 @@
             "NoEcho": "true",
             "Description": "Username for MySQL database access",
             "Type": "String",
-            "MinLength": "1",
+            "MinLength": "4",
             "MaxLength": "16",
             "AllowedPattern": "[a-zA-Z][a-zA-Z0-9]*",
             "ConstraintDescription": "must begin with a letter and contain only alphanumeric characters."
